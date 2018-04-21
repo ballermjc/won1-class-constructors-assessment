@@ -8,7 +8,16 @@
 //
 
 //Code here
+class Shape {
+    constructor(sides) {
+        this.sides = sides;
+        this.report = () => this.sides;
+    }
+}
 
+const triangle = new Shape(3);
+const square = new Shape(4);
+const pentagon = new Shape(5);
 
 //////////////////PROBLEM 2////////////////////
 
@@ -23,6 +32,20 @@
 // After creating the new cohorts, invoke the sayName method on cohort1, and invoke the takeAttendance method for cohort2.
 
 //Code here
+class Cohort {
+    constructor(program, campus, number, students) {
+        this.program = program;
+        this.campus = campus;
+        this.number = number;
+        this.students = students;
 
+        this.sayName = () => `This cohort is called ${program}${campus}${number}`
+        this.takeAttendance = () => console.log(students);
+    }
+}
 
+const cohort1 = new Cohort('w', 'pr', 27, ['bob', 'billy', 'bronson']);
+const cohort2 = new Cohort('w', 'pr', 31, ["Brendan Eich", "Dan Abramov", "Wes Bos", "Kent Dodds", "Michael Cooper"]);
+cohort1.sayName();
+cohort2.takeAttendance();
 
